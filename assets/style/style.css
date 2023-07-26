@@ -1,0 +1,13 @@
+/* body {
+    text-align: center;
+} */
+form{
+    margin: 10px auto;
+    padding: 10px 0px;
+}
+.make-column {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    width: max-content;
+}
