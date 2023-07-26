@@ -14,7 +14,7 @@ loginBtn.addEventListener("click",function(){
         //     console.log(i[j])
         // } 
         if (accessUser == accounts[i][0] && accessPass == accounts[i][1]){
-            console.log('welcome ${accessUser}')
+            console.log(`welcome ${accessUser}`)
         }
     }
     // console.log(accessUser , accessPass)
