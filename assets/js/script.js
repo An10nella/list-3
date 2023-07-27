@@ -19,6 +19,9 @@ loginBtn.addEventListener("click",function(){
             document.write(`<h1 style="text-align:center; color:blue; margin-top:50px; ">
             welcome <span style= "font-weight:bold; color:red;"> ${accessUser.toUpperCase()}
             </span></h1>`)
+            // setTimeout(() => location.href='login.html' , 2000);
+            setTimeout(secondPage, 2000);
+            
             
 
         }
@@ -32,3 +35,7 @@ loginBtn.addEventListener("click",function(){
    
 
 })
+function secondPage(){
+    window.location.replace("login.html")
+
+}
