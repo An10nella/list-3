@@ -25,6 +25,12 @@ const fighters = [
   console.log(fighters[3])
   let stageEl = document.getElementById("stage")
   let fightButtonEl = document.getElementById("fightButton")
+  let logOutBtn = document.getElementById("logOut")
+  document.title=("Emoji")
+  logOutBtn.addEventListener("click",function(){
+    window.location.replace("index.html")
+  }
+  )
 
   fightButtonEl.addEventListener("click",function(){
 
