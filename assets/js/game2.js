@@ -33,7 +33,7 @@ startBtnEl.addEventListener("click", function () {
 
         let card01 = Math.floor(Math.random() * 13) + 1
         let card02 = Math.floor(Math.random() * 13) + 1
-        sumCount = card01 + card02;
+        sumCount = card01 + card02
 
         bNameEl.textContent = `${accessUser}: $${balanceAdmin}`
         document.getElementById("username").textContent = `Welcome, ${accessUser}!`; // Set the admin's name
