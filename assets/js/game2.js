@@ -23,8 +23,9 @@ const accounts = [["admin01", "123"] , ["admin02","234"] , ["admin03", "345"] ]
 
 
 startBtnEl.addEventListener("click", function () {
-    let accessUser = usernameEl.value; // Get the entered username from the input field
-    if (admin.includes(accessUser)) {
+    let accUser = usernameEl.value
+    // if (admin.includes(accessUser)) {
+        console.log(accUser)
 
     if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
@@ -49,7 +50,7 @@ startBtnEl.addEventListener("click", function () {
         questPlay.innerText = "Cannot start another trial."
 
     }
-}
+// }
 
 })
 newBtnEl.addEventListener("click", function () {
