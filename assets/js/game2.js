@@ -24,7 +24,7 @@ const adminAccounts = ["admin01", "admin02", "admin03"]
 
 
 startBtnEl.addEventListener("click", function () {
-    accessUser = usernameEl.value; // Set accessUser from the input field
+    accessUser = usernameEl.value // Set accessUser from the input field
     if (adminAccounts.includes(accessUser)) {
     if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
