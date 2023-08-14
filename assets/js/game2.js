@@ -20,14 +20,12 @@ let accessUser = ''
 // let found = false
 
 
-const accounts = [["admin01", "123"] , ["admin02","234"] , ["admin03", "345"] ]
+const adminAccounts = ["admin01", "admin02", "admin03"]
 
 
 startBtnEl.addEventListener("click", function () {
-    let accUser = usernameEl.value
-    // if (admin.includes(accessUser)) {
-        console.log(accUser)
-
+    accessUser = usernameEl.value; // Set accessUser from the input field
+    if (adminAccounts.includes(accessUser)) {
     if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
         startGame = true
