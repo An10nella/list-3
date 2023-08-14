@@ -17,7 +17,7 @@ let oneTrial = false
 let maxNumb = false
 let startGame = false
 let accessUser = ''
-// let found = false
+
 
 
 const adminAccounts = ["admin01", "admin02", "admin03"]
