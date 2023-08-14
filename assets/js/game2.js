@@ -6,12 +6,12 @@ let sumScoreEL = document.getElementById("sumScore")
 let questPlay = document.getElementById("playQuestion")
 const bNameEl = document.getElementById("bjName")
 
-const accessUser = localStorage.getItem("accessUser")
+
 let sumCount = 0
 let cardsCount = 0
 let randomCard = 0
 let balanceAdmin = 200
-const usernameEl = document.getElementById("username")
+
 
 // const cards = [1,2,3,4,5,6,7,8,9,10,11]
 let win = 21
@@ -20,7 +20,8 @@ let maxNumb = false
 let startGame = false
 
 
-
+const accessUser = localStorage.getItem("accessUser")
+const usernameEl = document.getElementById("username")
 
 // const adminAccounts = ["admin01", "admin02", "admin03"]
 if (accessUser) {
