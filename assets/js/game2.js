@@ -24,6 +24,7 @@ const accessUser = ["admin01 , admin02 , admin03"]
 const usernameEl = document.getElementById("username")
 
 const adminAccounts = ["admin01", "admin02", "admin03"]
+
 if (accessUser)
  {
     document.write= `Welcome, ${accessUser}!`
@@ -45,7 +46,7 @@ startBtnEl.addEventListener("click", function () {
         sumCount = card01 + card02
 
         bNameEl.textContent = `${accessUser}: $${balanceAdmin}`
-        document.getElementById("username").textContent = `Welcome, ${accessUser}!`; // Set the admin's name
+        // document.getElementById("username").textContent = `Welcome, ${accessUser}!`; // Set the admin's name
         gameBtn.innerHTML = `Cards: ${card01} ${card02}`
         sumScoreEL.innerHTML = `Sum: ${sumCount}`
 
