@@ -11,7 +11,7 @@ let sumCount = 0
 let cardsCount = 0
 let randomCard = 0
 let balanceAdmin = 200
-
+let counter = 1
 
 // const cards = [1,2,3,4,5,6,7,8,9,10,11]
 let win = 21
@@ -20,12 +20,13 @@ let maxNumb = false
 let startGame = false
 
 
-const accessUser = localStorage.getItem("accessUser")
+const accessUser = ["admin01 , admin02 , admin03"]
 const usernameEl = document.getElementById("username")
 
-// const adminAccounts = ["admin01", "admin02", "admin03"]
-if (accessUser) {
-    bNameEl.textContent = `Welcome, ${accessUser}!`;
+const adminAccounts = ["admin01", "admin02", "admin03"]
+if (accessUser)
+ {
+    document.write= `Welcome, ${accessUser}!`
 } else {
     bNameEl.textContent = "Welcome to Blackjack!"
 }
@@ -33,7 +34,7 @@ if (accessUser) {
 startBtnEl.addEventListener("click", function () {
     
 // if(accessUser.includes(adminAccounts))  {
-    console.log(accessUser)
+    
     if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
         startGame = true
