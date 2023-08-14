@@ -18,3 +18,30 @@ form{
 #main-log-in {
     padding-top: 55px;
 }
+
+.main {
+    background-color: rgb(216, 216, 140);
+    text-align: center;
+    
+}
+
+
+
+.bodyBj {
+    background-image: url(/assets/pic/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+    /* border: 10rem solid black; relation for everything better than px */ 
+
+}
+.questionPlay {
+    font-style: italic;
+}
+
+.btn-start-game {
+    font-weight: 800;
+    padding: 10px 30px;
+    
+}
