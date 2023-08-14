@@ -16,6 +16,7 @@ let win = 21
 let oneTrial = false
 let maxNumb = false
 let startGame = false
+let accessUser = ''
 // let found = false
 
 
