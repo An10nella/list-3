@@ -4,7 +4,9 @@ let newBtnEl = document.getElementById("newBtn")
 let resetBtnEl = document.getElementById("resetBtn")
 let sumScoreEL = document.getElementById("sumScore")
 let questPlay = document.getElementById("playQuestion")
-let bNameEl = document.getElementById("bjName")
+const bNameEl = document.getElementById("bjName")
+
+const accessUser = localStorage.getItem("accessUser")
 let sumCount = 0
 let cardsCount = 0
 let randomCard = 0
@@ -16,16 +18,21 @@ let win = 21
 let oneTrial = false
 let maxNumb = false
 let startGame = false
-let accessUser = ''
 
 
 
-const adminAccounts = ["admin01", "admin02", "admin03"]
 
+// const adminAccounts = ["admin01", "admin02", "admin03"]
+if (accessUser) {
+    bNameEl.textContent = `Welcome, ${accessUser}!`;
+} else {
+    bNameEl.textContent = "Welcome to Blackjack!"
+}
 
 startBtnEl.addEventListener("click", function () {
-    accessUser = usernameEl.value // Set accessUser from the input field
-    if (adminAccounts.includes(accessUser)) {
+    
+// if(accessUser.includes(adminAccounts))  {
+    console.log(accessUser)
     if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
         startGame = true
@@ -49,7 +56,7 @@ startBtnEl.addEventListener("click", function () {
         questPlay.innerText = "Cannot start another trial."
 
     }
- }
+//  }
 
 })
 newBtnEl.addEventListener("click", function () {
