@@ -45,6 +45,6 @@ loginBtn.addEventListener("click",function(){
 
 })
 function secondPage(){
-    window.location.replace("picker.html")
+    window.location.replace("login.html")
 
 }
