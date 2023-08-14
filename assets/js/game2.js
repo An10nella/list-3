@@ -49,7 +49,7 @@ startBtnEl.addEventListener("click", function () {
         questPlay.innerText = "Cannot start another trial."
 
     }
-// }
+ }
 
 })
 newBtnEl.addEventListener("click", function () {
