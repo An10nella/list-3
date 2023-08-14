@@ -10,14 +10,35 @@ let cardsCount = 0
 let randomCard = 0
 let balanceAdmin = 200
 
+
 // const cards = [1,2,3,4,5,6,7,8,9,10,11]
 let win = 21
 let oneTrial = false
 let maxNumb = false
 let startGame = false
+// let found = false
+// let accessUser = "admin01"
+
+const admin = ["admin01" , "admin02" , "admin03"]
+
+
+function accAdmin(username) {
+    return admin.includes(username)
+}
 
 startBtnEl.addEventListener("click", function () {
-    if (!oneTrial && balanceAdmin >= 50) {
+    // if (count < 3){
+    
+    // for (y in admin){
+        
+    //     if(accessUser == admin[i] ){
+    //     // found = true
+    //     counter = 1
+    //     document.write(`${accessUser}`)
+
+
+    if (!oneTrial && balanceAdmin  >= 50 && accAdmin(accessUser) ) {
+        bNameEl
         oneTrial = true 
         startGame = true
         balanceAdmin -= 50
@@ -26,7 +47,7 @@ startBtnEl.addEventListener("click", function () {
         let card02 = Math.floor(Math.random() * 13) + 1
         sumCount = card01 + card02;
 
-        bNameEl.innerHTML = `Antonella: $${balanceAdmin}`
+        bNameEl.textContent = `${accessUser}: $${balanceAdmin}`
         gameBtn.innerHTML = `Cards: ${card01} ${card02}`
         sumScoreEL.innerHTML = `Sum: ${sumCount}`
 
@@ -38,6 +59,8 @@ startBtnEl.addEventListener("click", function () {
     } else {
         questPlay.innerText = "Cannot start another trial."
     }
+
+
 })
 newBtnEl.addEventListener("click", function () {
 
@@ -45,7 +68,7 @@ if (startGame){
 
     if (balanceAdmin >= 50 && !maxNumb) {
         balanceAdmin -= 50
-        bNameEl.textContent = `Antonella: $${balanceAdmin}`
+        bNameEl.textContent = `${accessUser} $${balanceAdmin}`
        
     sumCount += randomCard
     randomCard = Math.floor(Math.random() * 13) + 1
@@ -84,12 +107,19 @@ resetBtnEl.addEventListener("click",function(){
     maxNumb = false
     startGame = false
     balanceAdmin = 200
-    bNameEl.textContent = `Antonella: $${balanceAdmin}`
+    bNameEl.textContent = `${accessUser} $${balanceAdmin}`
     gameBtn.innerHTML = 'Cards:'
     sumScoreEL.innerHTML =`Sum:`
     questPlay.innerText = `Want to play again?`
 
 })
+
+let logOutBtn = document.getElementById("logOut")
+document.title=("Blackjack")
+logOutBtn.addEventListener("click",function(){
+  window.location.replace("index.html")
+}
+)
 
 
 
