@@ -9,7 +9,7 @@ let sumCount = 0
 let cardsCount = 0
 let randomCard = 0
 let balanceAdmin = 200
-
+const usernameEl = document.getElementById("username")
 
 // const cards = [1,2,3,4,5,6,7,8,9,10,11]
 let win = 21
@@ -17,28 +17,16 @@ let oneTrial = false
 let maxNumb = false
 let startGame = false
 // let found = false
-// let accessUser = "admin01"
-
-const admin = ["admin01" , "admin02" , "admin03"]
 
 
-function accAdmin(username) {
-    return admin.includes(username)
-}
+const accounts = [["admin01", "123"] , ["admin02","234"] , ["admin03", "345"] ]
+
 
 startBtnEl.addEventListener("click", function () {
-    // if (count < 3){
-    
-    // for (y in admin){
-        
-    //     if(accessUser == admin[i] ){
-    //     // found = true
-    //     counter = 1
-    //     document.write(`${accessUser}`)
+    let accessUser = usernameEl.value; // Get the entered username from the input field
+    if (admin.includes(accessUser)) {
 
-
-    if (!oneTrial && balanceAdmin  >= 50 && accAdmin(accessUser) ) {
-        bNameEl
+    if (!oneTrial && balanceAdmin  >= 50  ) {
         oneTrial = true 
         startGame = true
         balanceAdmin -= 50
@@ -48,6 +36,7 @@ startBtnEl.addEventListener("click", function () {
         sumCount = card01 + card02;
 
         bNameEl.textContent = `${accessUser}: $${balanceAdmin}`
+        document.getElementById("username").textContent = `Welcome, ${accessUser}!`; // Set the admin's name
         gameBtn.innerHTML = `Cards: ${card01} ${card02}`
         sumScoreEL.innerHTML = `Sum: ${sumCount}`
 
@@ -58,8 +47,9 @@ startBtnEl.addEventListener("click", function () {
         }
     } else {
         questPlay.innerText = "Cannot start another trial."
-    }
 
+    }
+}
 
 })
 newBtnEl.addEventListener("click", function () {
